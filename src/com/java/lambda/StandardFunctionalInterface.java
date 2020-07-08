@@ -1,4 +1,4 @@
-package com.java.person;
+package com.java.lambda;
 /* @author Richa Rochna */
 
 import com.java.person.Person;

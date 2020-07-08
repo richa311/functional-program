@@ -1,11 +1,13 @@
-package com.java.person;
+package com.java.lambda;
 /* @author Richa Rochna */
+
+import com.java.person.Person;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class PersonSoultionJava8 {
+public class LambdaSolution {
     public static void main(String[] args) {
         List<Person> people = Arrays.asList(
                 new Person("Charles", "Davis", 60),

@@ -1,4 +1,4 @@
-package com.java.exception;
+package com.java.lambda;
 /* @author Richa Rochna */
 
 import java.util.function.BiConsumer;
