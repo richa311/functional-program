@@ -1,7 +1,7 @@
 package com.java.streams;
 /* @author Richa Rochna */
 
-import com.java.person.Person;
+import com.java.dto.Person;
 
 import java.util.Arrays;
 import java.util.List;

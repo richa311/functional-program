@@ -1,4 +1,4 @@
-package com.java.person;
+package com.java.dto;
 /* @author Richa Rochna */
 
 public class Person {

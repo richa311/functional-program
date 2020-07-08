@@ -1,7 +1,7 @@
-package com.java.lambda;
+package com.java.lambdas;
 /* @author Richa Rochna */
 
-import com.java.person.Person;
+import com.java.dto.Person;
 
 import java.util.Arrays;
 import java.util.Collections;

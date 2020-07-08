@@ -1,4 +1,4 @@
-package com.java.lambda;
+package com.java.lambdas;
 /* @author Richa Rochna */
 
 import java.util.function.BiConsumer;

@@ -1,13 +1,15 @@
-package com.java.lambda;
+package com.java.lambdas;
 /* @author Richa Rochna */
 
-import com.java.person.Person;
+import com.java.dto.Person;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
-public class LambdaSolution {
+public class StandardFunctionalInterface {
     public static void main(String[] args) {
         List<Person> people = Arrays.asList(
                 new Person("Charles", "Davis", 60),
@@ -21,25 +23,23 @@ public class LambdaSolution {
 
         //Create a method that prints all elements in the list
         System.out.println("Prints all people");
-        printConditionally(people, p -> true);
+        performConditionally(people, p -> true, p -> System.out.println(p));
 
         //Create a method that prints all people that have last name and first name beginning with C
-
         System.out.println("Prints all people that have last name beginning with C");
-        printConditionally(people, p -> p.getLastName().startsWith("C"));
+        performConditionally(people, p -> p.getLastName().startsWith("C"), p -> System.out.println(p));
 
         System.out.println("Prints all people that have first name beginning with C");
-        printConditionally(people, p -> p.getFirstName().startsWith("C"));
+        performConditionally(people, p -> p.getFirstName().startsWith("C"), p -> System.out.println(p));
+
+        System.out.println("Prints all first name beginning with C");
+        performConditionally(people, p -> p.getFirstName().startsWith("C"), p -> System.out.println(p.getFirstName()));
     }
 
-    private static void printConditionally(List<Person> people, Condition condition) {
+    private static void performConditionally(List<Person> people, Predicate<Person> predicate, Consumer<Person> consumer) {
         for (Person p : people) {
-            if (condition.test(p))
-                System.out.println(p);
+            if (predicate.test(p))
+                consumer.accept(p);
         }
-    }
-
-    interface Condition {
-        boolean test(Person p);
     }
 }
